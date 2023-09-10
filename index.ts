@@ -1,9 +1,11 @@
+import figlet from "figlet";
+
 console.log("Hello via Bun!");
 
 const server = Bun.serve({
   port: 8890,
   fetch(req) {
-    const body = req.body;
+    const body = figlet.textSync("Bum bum !");
     return new Response(body + " - Buming +++");
   },
 });
