@@ -12,3 +12,9 @@ const server = Bun.serve({
 
 console.log("Bun console center activated!");
 console.log(`Localhost server running on port ${server.port}`);
+
+const hash = await Bun.password.hash("A very strong password");
+const hasAccess = await Bun.password.verify("A very strong password", hash);
+
+const access = hasAccess ? "Login OoO" : "Logout";
+console.log(access);
