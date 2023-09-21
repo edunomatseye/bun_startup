@@ -16,5 +16,5 @@ console.log(`Localhost server running on port ${server.port}`);
 const hash = await Bun.password.hash("A very strong password");
 const hasAccess = await Bun.password.verify("A very strong password", hash);
 
-const access = hasAccess ? "Login OoO" : "Logout";
+const access = hasAccess ? "Login" : "Logout";
 console.log(access);
